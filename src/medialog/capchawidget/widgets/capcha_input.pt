@@ -1,14 +1,3 @@
-<button                class="btn btn-default" 
- 					   role="capcha"  
-					   tal:attributes="id string:${view/id};
-                       name view/name;
-                       value view/value;
-                       disabled view/disabled;
-                       alt view/alt;
-                       accesskey view/accesskey;
-                       onselect view/onselect;"  />
-              
-
 <input  type="hidden"  disabled="True"
  					   tal:attributes="id string:${view/id};
                        name view/name;
@@ -21,13 +10,8 @@
                        maxlength view/maxlength" />
  
  
- 
+ <tal:block tal:replace="structure context/@@captcha/image_tag"/>
 
  
- <div  tal:define="sitekey  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.key'] or '';
- 	 sitesecret  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.secret'] or ''"
- 	 class="g-recaptcha" 
- 	 tal:attributes="data-sitekey sitekey"></div>
- <script src='https://www.google.com/recaptcha/api.js'></script>
 
  
