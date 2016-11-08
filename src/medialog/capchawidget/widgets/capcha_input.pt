@@ -1,4 +1,4 @@
-<input  type="hidden"  disabled="True"
+<input  type="hidden"  disabled="False"
  					   tal:attributes="id string:${view/id};
                        name view/name;
                        title view/title;
@@ -7,11 +7,11 @@
                        accesskey view/accesskey;
                        onselect view/onselect;
                        size view/size;
-                       maxlength view/maxlength" />
+                       maxlength view/maxlength" >
  
  
  <tal:block tal:replace="structure context/@@captcha/image_tag"/>
-
+</input>
  
 
  

@@ -12,7 +12,7 @@ from medialog.capchawidget.interfaces import ICapchaSettings
 
 
 class ICapchaWidget(interfaces.IWidget):
-    """Iconpicker widget."""
+    """Capcha widget."""
  
 
 class CapchaWidget(text.TextWidget):
@@ -20,6 +20,7 @@ class CapchaWidget(text.TextWidget):
 
     zope.interface.implementsOnly(ICapchaWidget)
     
+    #validating here ?
     pass
 
         
