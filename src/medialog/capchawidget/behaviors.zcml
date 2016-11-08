@@ -12,7 +12,7 @@
  <plone:behavior
         title="capcha behavior"
         description="Provides Capcha widget"
-        provides=".behavior.ICapchaPickerBehavior"
+        provides=".behavior.ICapchaBehavior"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
    
