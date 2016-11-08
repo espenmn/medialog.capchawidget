@@ -1,0 +1,22 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           xmlns:i18n="http://namespaces.zope.org/i18n">
+           
+   <include package="plone.behavior" file="meta.zcml" /> 
+  <include package=".widgets" />
+
+
+  <!-- Include behavior -->
+  <include file="behaviors.zcml" />
+
+ <plone:behavior
+        title="capcha behavior"
+        description="Provides Capcha widget"
+        provides=".behavior.ICapchaPickerBehavior"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        />
+   
+   
+   
+</configure>

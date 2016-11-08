@@ -1,0 +1,35 @@
+<button                class="btn btn-default" 
+ 					   role="capcha"  
+					   tal:attributes="id string:${view/id};
+                       name view/name;
+                       data-iconset   view/iconset;
+                       data-icon      view/value;
+                       data-rows      view/rows;
+                       data-cols      view/cols;
+                       data-placement view/placement;
+                       value view/value;
+                       disabled view/disabled;
+                       alt view/alt;
+                       accesskey view/accesskey;
+                       onselect view/onselect;"  />
+              
+
+<input  type="hidden"  disabled="True"
+ 					   tal:attributes="id string:${view/id};
+                       name view/name;
+                       title view/title;
+                       lang view/lang;
+                       alt view/alt;
+                       accesskey view/accesskey;
+                       onselect view/onselect;
+                       size view/size;
+                       maxlength view/maxlength" />
+ 
+ 
+ 
+ 
+ 
+ <div class="g-recaptcha" data-sitekey="6Le8IgsUAAAAADmOK3Omj1dWkrnSpFIEJ9qH52ol"></div>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+
+ 
