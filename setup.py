@@ -44,6 +44,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'plone.api',
+        'medialog.controlpanel',
         'setuptools',
         'z3c.jbot',
         'plone.app.dexterity',

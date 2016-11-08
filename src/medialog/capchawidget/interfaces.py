@@ -28,11 +28,11 @@ class ICapchaSettings(form.Schema):
             ],
      )
 
-    key = schema.Text (
+    key = schema.TextLine (
     	title=_(u"label_key", default=u"Key"),
     )
 
-    secret = schema.Text (
+    secret = schema.TextLine (
     	title=_(u"label_secret", default=u"Secret"),
     )
 

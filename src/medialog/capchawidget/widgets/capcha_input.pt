@@ -2,11 +2,6 @@
  					   role="capcha"  
 					   tal:attributes="id string:${view/id};
                        name view/name;
-                       data-iconset   view/iconset;
-                       data-icon      view/value;
-                       data-rows      view/rows;
-                       data-cols      view/cols;
-                       data-placement view/placement;
                        value view/value;
                        disabled view/disabled;
                        alt view/alt;
