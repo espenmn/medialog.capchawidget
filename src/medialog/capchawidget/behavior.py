@@ -7,7 +7,7 @@ from zope.interface import alsoProvides
 from zope.i18nmessageid import MessageFactory
 
 
-from medialog.iconpicker.widgets.widget import CapchaFieldWidget
+from medialog.capchawidget.widgets.widget import CapchaFieldWidget
 
 _ = MessageFactory('medialog.capchawidget')
 
