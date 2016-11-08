@@ -8,7 +8,6 @@
 
 
   <!-- Include behavior -->
-  <include file="behaviors.zcml" />
 
  <plone:behavior
         title="capcha behavior"

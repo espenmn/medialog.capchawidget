@@ -24,3 +24,5 @@ report.html
 .DS_Store
 
 src/medialog/capchawidget/profiles/.DS_Store
+
+*.pyc

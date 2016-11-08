@@ -7,7 +7,7 @@ from z3c.form import widget
 from z3c.form.browser import text
 
 from plone import api
-from medialog.capcha.interfaces import ICapchaSettings
+from medialog.capchawidget.interfaces import ICapchaSettings
 
 
 

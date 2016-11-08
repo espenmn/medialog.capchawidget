@@ -27,9 +27,12 @@
  
  
  
+
  
- 
- <div class="g-recaptcha" data-sitekey="6Le8IgsUAAAAADmOK3Omj1dWkrnSpFIEJ9qH52ol"></div>
+ <div  tal:define="sitekey  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.key'] or '';
+ 	 sitesecret  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.secret'] or ''"
+ 	 class="g-recaptcha" 
+ 	 tal:attributes="data-sitekey sitekey"></div>
  <script src='https://www.google.com/recaptcha/api.js'></script>
 
  

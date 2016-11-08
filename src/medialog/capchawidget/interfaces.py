@@ -15,7 +15,6 @@ class IMedialogCapchawidgetLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
 
-
 class ICapchaSettings(form.Schema):
     """Your google capcha keys
     """
@@ -33,7 +32,7 @@ class ICapchaSettings(form.Schema):
     	title=_(u"label_key", default=u"Key"),
     )
 
-    key = schema.Text (
+    secret = schema.Text (
     	title=_(u"label_secret", default=u"Secret"),
     )
 
