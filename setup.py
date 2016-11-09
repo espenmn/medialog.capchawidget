@@ -45,7 +45,6 @@ setup(
     install_requires=[
         'plone.api',
         'medialog.controlpanel',
-        'collective.recaptcha',
         'setuptools',
         'z3c.jbot',
         'plone.app.dexterity',

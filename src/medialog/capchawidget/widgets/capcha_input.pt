@@ -1,5 +1,4 @@
-<input  type="hidden"  disabled="False"
- 					   tal:attributes="id string:${view/id};
+<input  type="hidden"  tal:attributes="id string:${view/id};
                        name view/name;
                        title view/title;
                        lang view/lang;
@@ -7,11 +6,13 @@
                        accesskey view/accesskey;
                        onselect view/onselect;
                        size view/size;
-                       maxlength view/maxlength" >
+                       maxlength view/maxlength" />
  
  
- <tal:block tal:replace="structure context/@@captcha/image_tag"/>
-</input>
- 
+ <div  tal:define="sitekey  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.key'] or '';
+ 	 sitesecret  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.secret'] or ''"
+ 	 class="g-recaptcha" 
+ 	 tal:attributes="data-sitekey sitekey"></div>
+ <script src='https://www.google.com/recaptcha/api.js'></script>
 
  
