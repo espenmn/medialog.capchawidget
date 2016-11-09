@@ -15,6 +15,31 @@ from medialog.capchawidget.widgets.widget import CapchaFieldWidget
 _ = MessageFactory('medialog.capchawidget')
 
 
+class CapchaValidator(validator.SimpleFieldValidator):
+    """ z3c.form validator class for international phone numbers """
+
+    import pdb;pdb.set_trace()
+            
+    def validate(self, value):
+        #info = IRecaptchaInfo(self.request)
+        #if info.verified:
+        #    return True
+
+        #if not self.settings.private_key:
+        #    raise ValueError(
+        #        'No recaptcha private key configured. '
+        #        'Go to /@@recaptcha-settings to configure.'
+        #    )
+        import pdb;pdb.set_trace()
+        response_field = self.context.request.get('g-recaptcha-response')
+        remote_addr = 'https://www.google.com/recaptcha/api/siteverify'
+        key = self.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.key']
+        res = submit(response_field, self.settings.private_key, remote_addr)
+        if res.error_code:
+            info.error = res.error_code
+
+        info.verified = res.is_valid
+        return res.is_valid
 
 
 
