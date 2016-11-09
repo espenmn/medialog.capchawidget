@@ -40,7 +40,7 @@ class CapchaValidator(validator.SimpleFieldValidator):
         info.verified = res.is_valid
         return res.is_valid
 
-@form.validator(field=CapchaBehavior['capchafield'])
+@form.validator(field=ICapchaBehavior['capchafield'])
 class ICapchaBehavior(form.Schema):
     """ A field for capcha"""
     
