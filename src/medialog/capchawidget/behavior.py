@@ -29,7 +29,7 @@ class CapchaValidator(validator.SimpleFieldValidator):
         #        'No recaptcha private key configured. '
         #        'Go to /@@recaptcha-settings to configure.'
         #    )
-        import pdb.pdb.set_trace()
+        import pdb;pdb.set_trace()
         response_field = self.context.request.get('g-recaptcha-response')
         remote_addr = 'https://www.google.com/recaptcha/api/siteverify'
         key = self.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.key']
