@@ -13,24 +13,6 @@ from medialog.capchawidget.widgets.widget import CapchaFieldWidget
 _ = MessageFactory('medialog.capchawidget')
 
     
-def checkForMagic(value):
-       return 'magic' in value
-
-class ICapchaBehavior(form.Schema):
-    """ A field for capcha"""
-    
-    
-    capchafield = schema.TextLine(
-        title = _("capcha", default=u"Capcha"),
-        constraint=checkForMagic,
-        required = False,
-        description = _("help_capcha",
-                      default="Dont be a robot"),
-    )
-
-    form.widget(
-            capchafield=CapchaFieldWidget,
-    )
     
     
     def checkForMagic(value):
@@ -57,6 +39,24 @@ class ICapchaBehavior(form.Schema):
 
         info.verified = res.is_valid
         return res.is_valid
+
+
+
+class ICapchaBehavior(form.Schema):
+    """ A field for capcha"""
+    
+    
+    capchafield = schema.TextLine(
+        title = _("capcha", default=u"Capcha"),
+        constraint=checkForMagic,
+        required = False,
+        description = _("help_capcha",
+                      default="Dont be a robot"),
+    )
+
+    form.widget(
+            capchafield=CapchaFieldWidget,
+    )
 
 alsoProvides(ICapchaBehavior, IFormFieldProvider)
 

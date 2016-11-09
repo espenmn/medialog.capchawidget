@@ -1,4 +1,4 @@
-<input  type="hidden"  tal:attributes="id string:${view/id};
+<input tal:attributes="id string:${view/id};
                        name view/name;
                        title view/title;
                        lang view/lang;
