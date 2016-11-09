@@ -65,7 +65,7 @@ class ICapchaBehavior(form.Schema):
 alsoProvides(ICapchaBehavior, IFormFieldProvider)
 
 
-@form.validator.validator(field=ICapchaBehavior['capchafield'])
+@form.validator(field=ICapchaBehavior['capchafield'])
 class CapchaValidator(validator.SimpleFieldValidator):
     """ z3c.form validator class for international phone numbers """
 
