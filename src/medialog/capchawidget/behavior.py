@@ -19,6 +19,8 @@ _ = MessageFactory('medialog.capchawidget')
 class CapchaValidator(validator.SimpleFieldValidator):
     """ z3c.form validator class for international phone numbers """
 
+    import pdb;pdb.set_trace()
+            
     def validate(self, value):
         #info = IRecaptchaInfo(self.request)
         #if info.verified:
