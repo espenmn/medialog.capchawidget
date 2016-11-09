@@ -47,7 +47,6 @@ class ICapchaBehavior(form.Schema):
     
     capchafield = schema.TextLine(
         title = _("capcha", default=u"Capcha"),
-        constraint=capcha_verify,
         required = False,
         description = _("help_capcha",
                       default="Dont be a robot"),
