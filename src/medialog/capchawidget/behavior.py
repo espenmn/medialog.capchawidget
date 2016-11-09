@@ -58,11 +58,7 @@ class ICapchaBehavior(form.Schema):
             capchafield=CapchaFieldWidget,
     )
     
-    form.validator (
-        capchafield=CapchaValidator,
-    )
 
-alsoProvides(ICapchaBehavior, IFormFieldProvider)
 
 
 @form.validator(field=ICapchaBehavior['capchafield'])
@@ -91,5 +87,9 @@ class CapchaValidator(validator.SimpleFieldValidator):
 
         info.verified = res.is_valid
         return res.is_valid
+        
+        
+alsoProvides(ICapchaBehavior, IFormFieldProvider)
+
 
 
