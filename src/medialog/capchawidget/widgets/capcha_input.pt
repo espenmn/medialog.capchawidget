@@ -1,5 +1,6 @@
 <input tal:attributes="id string:${view/id};
                        name view/name;
+                       value view/value;
                        title view/title;
                        lang view/lang;
                        alt view/alt;
