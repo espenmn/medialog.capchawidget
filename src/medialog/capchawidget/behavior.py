@@ -16,6 +16,31 @@ _ = MessageFactory('medialog.capchawidget')
 
 
 
+
+
+class ICapchaBehavior(form.Schema):
+    """ A field for capcha"""
+    
+    
+    capchafield = schema.TextLine(
+        title = _("capcha", default=u"Capcha"),
+        required = False,
+        description = _("help_capcha",
+                      default="Dont be a robot"),
+    )
+
+    form.widget(
+            capchafield=CapchaFieldWidget,
+    )
+    
+    form.validator (
+        capchafield=CapchaValidator,
+    )
+
+alsoProvides(ICapchaBehavior, IFormFieldProvider)
+
+
+@form.validator.validator(field=ICapchaBehavior['capchafield'])
 class CapchaValidator(validator.SimpleFieldValidator):
     """ z3c.form validator class for international phone numbers """
 
@@ -41,31 +66,5 @@ class CapchaValidator(validator.SimpleFieldValidator):
 
         info.verified = res.is_valid
         return res.is_valid
-
-class ICapchaBehavior(form.Schema):
-    """ A field for capcha"""
-    
-    
-    capchafield = schema.TextLine(
-        title = _("capcha", default=u"Capcha"),
-        required = False,
-        constraint = CapchaValidator,
-        description = _("help_capcha",
-                      default="Dont be a robot"),
-    )
-
-    form.widget(
-            capchafield=CapchaFieldWidget,
-    )
-    
-    form.validator (
-        capchafield=CapchaValidator,
-    )
-
-alsoProvides(ICapchaBehavior, IFormFieldProvider)
-
-
-#@form.validator.validator(field=ICapchaBehavior['capchafield'])
-
 
 
