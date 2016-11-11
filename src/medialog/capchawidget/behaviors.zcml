@@ -16,6 +16,9 @@
         for="plone.dexterity.interfaces.IDexterityContent"
         />
    
-   
+  <adapter
+      factory=".behavior.Over21"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      />
    
 </configure>

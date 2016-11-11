@@ -20,7 +20,6 @@ class CapchaWidget(text.TextWidget):
 
     zope.interface.implementsOnly(ICapchaWidget)
     
-    #validating here ?
     pass
 
         
