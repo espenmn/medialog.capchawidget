@@ -12,17 +12,15 @@ from medialog.capchawidget.interfaces import ICapchaSettings
 
 
 class ICapchaWidget(interfaces.IWidget):
-    """Capcha widget."""
+    """Capchar widget."""
  
 
 class CapchaWidget(text.TextWidget):
     """Capcha Widget"""
-
     zope.interface.implementsOnly(ICapchaWidget)
-    pass
+    
 
         
 def CapchaFieldWidget(field, request):
     """IFieldWidget factory for CapchaWidget."""
     return widget.FieldWidget(field, CapchaWidget(request))
-    

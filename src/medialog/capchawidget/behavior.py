@@ -16,23 +16,22 @@ from medialog.capchawidget.widgets.widget import CapchaFieldWidget
 
 _ = MessageFactory('medialog.capchawidget')
 
-from plone.supermodel import model
 import zope.component
 import zope.interface
 
 
 
-class ICapchaBehavior(model.Schema):
+class ICapchaBehavior(form.Schema):
     capchafield = schema.TextLine(
         title = _("capcha", default=u"Capcha"),
         required = False,
         description = _("help_capcha",
                       default="Dont be a robot"),
     )
+    form.widget(
+            capchafield=CapchaFieldWidget,
+    )
 
-
-
-alsoProvides(ICapchaBehavior, IFormFieldProvider)
 
 
 
@@ -44,6 +43,8 @@ class CapchaValidator(validator.SimpleFieldValidator):
     def validate(self, value):
         """ Validate  on input """
         super(CapchaValidator, self).validate(value)
+        
+        import pdb; pdb.set_trace()
 
         if value =='emn':
             return True
@@ -61,5 +62,7 @@ validator.WidgetValidatorDiscriminators(CapchaValidator, field=ICapchaBehavior['
 zope.component.provideAdapter(CapchaValidator)
 
 
+
+alsoProvides(ICapchaBehavior, IFormFieldProvider)
 
 

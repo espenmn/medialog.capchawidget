@@ -4,6 +4,7 @@
            xmlns:i18n="http://namespaces.zope.org/i18n">
            
    <include package="plone.behavior" file="meta.zcml" /> 
+   <include package=".widgets" />
  
  <plone:behavior
         title="capcha behavior"
