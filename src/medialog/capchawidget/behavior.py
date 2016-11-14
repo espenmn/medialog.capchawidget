@@ -43,8 +43,6 @@ class CapchaValidator(validator.SimpleFieldValidator):
         """ Validate  on input """
         super(CapchaValidator, self).validate(value)
         
-        import pdb; pdb.set_trace()
-        
         context = self.context
         value = context.restrictedTraverse('@@captcha').verify()
 
