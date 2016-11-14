@@ -6,7 +6,6 @@ from plone.autoform.interfaces import IFormFieldProvider
 from zope.interface import alsoProvides
 from zope.i18nmessageid import MessageFactory
 
-from zope.interface import invariant, Invalid
 from zope.interface import Invalid
 from z3c.form import validator
 from z3c.form.validator import SimpleFieldValidator
@@ -49,13 +48,11 @@ class CapchaValidator(validator.SimpleFieldValidator):
         context = self.context
         value = context.restrictedTraverse('@@captcha').verify()
 
-        if value =='emn':
+        if value ==True:
             return True
         
-        # The value is not required
-        for c in value:
-            if c not in allowed_characters:
-                raise zope.interface.Invalid(_(u"Robot"))
+        # Robot answer
+        raise zope.interface.Invalid(_(u"Robot"))
 
 
 # Set conditions for which fields the validator class applies
