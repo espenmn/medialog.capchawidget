@@ -19,7 +19,6 @@ class CapchaWidget(text.TextWidget):
     """Capcha Widget"""
 
     zope.interface.implementsOnly(ICapchaWidget)
-    
     pass
 
         

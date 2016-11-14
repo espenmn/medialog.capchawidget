@@ -16,23 +16,13 @@ from medialog.capchawidget.widgets.widget import CapchaFieldWidget
 
 _ = MessageFactory('medialog.capchawidget')
 
+from plone.supermodel import model
 import zope.component
-
-
-class Over21(SimpleFieldValidator):
-
-    def validate(self, value, force=False):
-        import pdb; pdb.set_trace()
-        """See interfaces.IValidator"""
-        if value is self.field.missing_value:
-            pass
+import zope.interface
 
 
 
-class ICapchaBehavior(form.Schema):
-    """ A field for capcha"""
-    
-    
+class ICapchaBehavior(model.Schema):
     capchafield = schema.TextLine(
         title = _("capcha", default=u"Capcha"),
         required = False,
@@ -40,23 +30,36 @@ class ICapchaBehavior(form.Schema):
                       default="Dont be a robot"),
     )
 
-    form.widget(
-            capchafield=CapchaFieldWidget,
-    )
-    
-    form.validator (
-        capchafield=Over21,
-    )
-    
-    #@invariant
-    #def capchafieldInvariant(data):
-    #    import pdb; pdb.set_trace()
-    #    if data.capchafield == 'abc':
-    #        raise Invalid(_(u"Virker som et robot svar!"))
-    
 
-        
 
 alsoProvides(ICapchaBehavior, IFormFieldProvider)
+
+
+
+
+@form.validator(field=ICapchaBehavior['capchafield'])
+class CapchaValidator(validator.SimpleFieldValidator):
+    """ z3c.form validator class for capcha field """
+
+    def validate(self, value):
+        """ Validate  on input """
+        super(CapchaValidator, self).validate(value)
+
+        if value =='emn':
+            return True
+        
+        # The value is not required
+        for c in value:
+            if c not in allowed_characters:
+                raise zope.interface.Invalid(_(u"Robot"))
+
+
+# Set conditions for which fields the validator class applies
+validator.WidgetValidatorDiscriminators(CapchaValidator, field=ICapchaBehavior['capchafield'])
+#
+# Register the validator so it will be looked up by z3c.form machinery
+zope.component.provideAdapter(CapchaValidator)
+
+
 
 

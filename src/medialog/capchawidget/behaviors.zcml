@@ -4,21 +4,13 @@
            xmlns:i18n="http://namespaces.zope.org/i18n">
            
    <include package="plone.behavior" file="meta.zcml" /> 
-  <include package=".widgets" />
-
-
-  <!-- Include behavior -->
-
+ 
  <plone:behavior
         title="capcha behavior"
         description="Provides Capcha widget"
         provides=".behavior.ICapchaBehavior"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
-   
-  <adapter
-      factory=".behavior.Over21"
-      for="plone.dexterity.interfaces.IDexterityContent"
-      />
+
    
 </configure>
