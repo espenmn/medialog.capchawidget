@@ -14,6 +14,9 @@
  	 sitesecret  python:context.portal_registry['medialog.capchawidget.interfaces.ICapchaSettings.secret'] or ''"
  	 class="g-recaptcha" 
  	 tal:attributes="data-sitekey sitekey"></div>
- <script src='https://www.google.com/recaptcha/api.js'></script>
-
+ 
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  
+ <tal:block tal:replace="structure context/@@captcha/image_tag"/>
+ 
  
