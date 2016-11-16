@@ -10,9 +10,7 @@
   <includeDependencies package="." />
 
   <include file="behaviors.zcml" />
-  
-  <!--include package=".browser" /-->
-
+ 
 
   <genericsetup:registerProfile
       name="default"

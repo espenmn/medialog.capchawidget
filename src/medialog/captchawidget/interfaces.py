@@ -28,11 +28,11 @@ class IRecaptchaSettings(form.Schema):
             ],
      )
 
-    key = schema.TextLine (
+    private_key = schema.TextLine (
     	title=_(u"label_key", default=u"Site Key"),
     )
 
-    secret = schema.TextLine (
+    public_key = schema.TextLine (
     	title=_(u"label_secret", default=u"Secret Key"),
     )
 
