@@ -23,8 +23,8 @@ class IRecaptchaSettings(form.Schema):
         'captcha',
         label=_(u'Captcha'),
         fields=[
-             'key',
-             'secret',
+             'private_key',
+             'public_key',
             ],
      )
 
