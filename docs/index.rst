@@ -2,4 +2,5 @@
 medialog.captchawidget
 ====================
 
-User documentation
+Dexterity behavior that adds a captchawidget.
+
