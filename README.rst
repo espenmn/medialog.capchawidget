@@ -14,9 +14,14 @@ Features
 - Adds a capcha behavior you can add to your dexterity content type
 
 
+Purpose
+--------
+
+- Let anon users add content to your site, preventing bots
 
 
-Documentation
+
+Usage
 -------------
 
 - Install product from add-ons control panel
