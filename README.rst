@@ -16,9 +16,12 @@ Features
 
 
 
-
 Documentation
 -------------
+
+- Install product from add-ons control panel
+- Go to site control panel, add your (google) captcha key and secrett.
+- Add captcha behavior to your content type
 
 
 
