@@ -8,6 +8,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 from zope.interface import alsoProvides
 from plone.directives import form
+#from collective.recaptcha.settings  import IRecaptchaSettings
 from medialog.controlpanel.interfaces import IMedialogControlpanelSettingsProvider
 
 

@@ -6,8 +6,8 @@ from z3c.form import interfaces
 from z3c.form import widget
 from z3c.form.browser import text
 
-from plone import api
-from medialog.captchawidget.interfaces import IRecaptchaSettings
+#from plone import api
+#from medialog.captchawidget.interfaces import IRecaptchaSettings
 
 
 
