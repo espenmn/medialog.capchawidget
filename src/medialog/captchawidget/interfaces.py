@@ -19,26 +19,26 @@ class IMedialogCaptchawidgetLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
 
 
-#class IWRecaptchaSettings(form.Schema):
-#    """Your google captcha keys
-#    """
-#
-#    form.fieldset(
-#        'captcha',
-#        label=_(u'Captcha'),
-#        fields=[
-#             'private_key',
-#             'public_key',
-#            ],
+# class IRecaptchaSettings(form.Schema):
+#     """Your google captcha keys
+#     """
+# 
+#     form.fieldset(
+#         'captcha',
+#         label=_(u'Captcha'),
+#         fields=[
+#              'private_key',
+#              'public_key',
+#             ],
+#      )
+# 
+#     private_key = schema.TextLine (
+#     	title=_(u"label_key", default=u"Site Key"),
 #     )
-#
-#    private_key = schema.TextLine (
-#    	title=_(u"label_key", default=u"Site Key"),
-#    )
-#
-#    public_key = schema.TextLine (
-#    	title=_(u"label_secret", default=u"Secret Key"),
-#    )
+# 
+#     public_key = schema.TextLine (
+#     	title=_(u"label_secret", default=u"Secret Key"),
+#     )
 
         
 alsoProvides(IRecaptchaSettings, IMedialogControlpanelSettingsProvider)
