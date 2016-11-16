@@ -4,13 +4,13 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s medialog.capchawidget -t test_kast.robot --all
+#  $ bin/test -s medialog.captchawidget -t test_kast.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src medialog.capchawidget.testing.MEDIALOG_CAPCHAWIDGET_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src medialog.captchawidget.testing.MEDIALOG_CAPCHAWIDGET_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #

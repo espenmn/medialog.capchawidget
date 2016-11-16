@@ -1,7 +1,0 @@
-<registry>
-<records interface="medialog.capchawidget.interfaces.ICapchaSettings">
-<value key="key">XXXX</value>
-<value key="secret">yyyy</value>
-
-</records>
-</registry>

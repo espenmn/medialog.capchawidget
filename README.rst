@@ -3,7 +3,7 @@
    This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
-medialog.capchawidget
+medialog.captchawidget
 ==============================================================================
 
 Tell me what your product does
@@ -38,14 +38,14 @@ This product has been translated into
 Installation
 ------------
 
-Install medialog.capchawidget by adding it to your buildout::
+Install medialog.captchawidget by adding it to your buildout::
 
     [buildout]
 
     ...
 
     eggs =
-        medialog.capchawidget
+        medialog.captchawidget
 
 
 and then running ``bin/buildout``
@@ -54,8 +54,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/medialog.capchawidget/issues
-- Source Code: https://github.com/collective/medialog.capchawidget
+- Issue Tracker: https://github.com/collective/medialog.captchawidget/issues
+- Source Code: https://github.com/collective/medialog.captchawidget
 - Documentation: https://docs.plone.org/foo/bar
 
 

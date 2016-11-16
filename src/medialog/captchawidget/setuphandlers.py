@@ -9,19 +9,19 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller"""
         return [
-            'medialog.capchawidget:uninstall',
+            'medialog.captchawidget:uninstall',
         ]
 
 
 def post_install(context):
     """Post install script"""
-    if context.readDataFile('medialogcapchawidget_default.txt') is None:
+    if context.readDataFile('medialogcaptchawidget_default.txt') is None:
         return
     # Do something during the installation of this package
 
 
 def uninstall(context):
     """Uninstall script"""
-    if context.readDataFile('medialogcapchawidget_uninstall.txt') is None:
+    if context.readDataFile('medialogcaptchawidget_uninstall.txt') is None:
         return
     # Do something during the uninstallation of this package

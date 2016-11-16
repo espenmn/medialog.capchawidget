@@ -7,32 +7,32 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
-import medialog.capchawidget
+import medialog.captchawidget
 
 
-class MedialogCapchawidgetLayer(PloneSandboxLayer):
+class MedialogCaptchawidgetLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
-        self.loadZCML(package=medialog.capchawidget)
+        self.loadZCML(package=medialog.captchawidget)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'medialog.capchawidget:default')
+        applyProfile(portal, 'medialog.captchawidget:default')
 
 
-MEDIALOG_CAPCHAWIDGET_FIXTURE = MedialogCapchawidgetLayer()
+MEDIALOG_CAPCHAWIDGET_FIXTURE = MedialogCaptchawidgetLayer()
 
 
 MEDIALOG_CAPCHAWIDGET_INTEGRATION_TESTING = IntegrationTesting(
     bases=(MEDIALOG_CAPCHAWIDGET_FIXTURE,),
-    name='MedialogCapchawidgetLayer:IntegrationTesting'
+    name='MedialogCaptchawidgetLayer:IntegrationTesting'
 )
 
 
 MEDIALOG_CAPCHAWIDGET_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(MEDIALOG_CAPCHAWIDGET_FIXTURE,),
-    name='MedialogCapchawidgetLayer:FunctionalTesting'
+    name='MedialogCaptchawidgetLayer:FunctionalTesting'
 )
 
 
@@ -42,5 +42,5 @@ MEDIALOG_CAPCHAWIDGET_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE
     ),
-    name='MedialogCapchawidgetLayer:AcceptanceTesting'
+    name='MedialogCaptchawidgetLayer:AcceptanceTesting'
 )

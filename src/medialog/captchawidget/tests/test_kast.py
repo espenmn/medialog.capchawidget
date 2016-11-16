@@ -6,8 +6,8 @@ from plone.app.testing import setRoles
 from plone.dexterity.interfaces import IDexterityFTI
 from plone import api
 
-from medialog.capchawidget.testing import MEDIALOG_CAPCHAWIDGET_INTEGRATION_TESTING  # noqa
-from medialog.capchawidget.interfaces import IKast
+from medialog.captchawidget.testing import MEDIALOG_CAPCHAWIDGET_INTEGRATION_TESTING  # noqa
+from medialog.captchawidget.interfaces import IKast
 
 import unittest2 as unittest
 

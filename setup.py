@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the medialog.capchawidget package."""
+"""Installer for the medialog.captchawidget package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -18,9 +18,9 @@ long_description = (
 
 
 setup(
-    name='medialog.capchawidget',
+    name='medialog.captchawidget',
     version='1.0a1',
-    description="Capcha widget for Dexterity / Plone",
+    description="Captcha widget for Dexterity / Plone",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -35,7 +35,7 @@ setup(
     keywords='Python Plone',
     author='Espen Moe-Nilssen',
     author_email='espen@medialog.no',
-    url='https://pypi.python.org/pypi/medialog.capchawidget',
+    url='https://pypi.python.org/pypi/medialog.captchawidget',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['medialog'],

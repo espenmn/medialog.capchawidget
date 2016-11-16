@@ -1,5 +1,5 @@
 ====================
-medialog.capchawidget
+medialog.captchawidget
 ====================
 
 User documentation

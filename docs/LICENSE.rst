@@ -1,4 +1,4 @@
-medialog.capchawidget Copyright 2015, Espen Moe-Nilssen
+medialog.captchawidget Copyright 2015, Espen Moe-Nilssen
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

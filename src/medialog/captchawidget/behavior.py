@@ -11,37 +11,37 @@ from z3c.form import validator
 from z3c.form.validator import SimpleFieldValidator
 
 
-from medialog.capchawidget.widgets.widget import CapchaFieldWidget
+from medialog.captchawidget.widgets.widget import CaptchaFieldWidget
 
-_ = MessageFactory('medialog.capchawidget')
+_ = MessageFactory('medialog.captchawidget')
 
 import zope.component
 import zope.interface
 
 
 
-class ICapchaBehavior(form.Schema):
-    capchafield = schema.TextLine(
-        title = _("capcha", default=u"Capcha"),
+class ICaptchaBehavior(form.Schema):
+    captchafield = schema.TextLine(
+        title = _("captcha", default=u"Captcha"),
         required = False,
-        description = _("help_capcha",
+        description = _("help_captcha",
                       default="Dont be a robot"),
     )
     form.widget(
-            capchafield=CapchaFieldWidget,
+            captchafield=CaptchaFieldWidget,
     )
 
 
 
 
 
-@form.validator(field=ICapchaBehavior['capchafield'])
-class CapchaValidator(validator.SimpleFieldValidator):
-    """ z3c.form validator class for capcha field """
+@form.validator(field=ICaptchaBehavior['captchafield'])
+class CaptchaValidator(validator.SimpleFieldValidator):
+    """ z3c.form validator class for captcha field """
 
     def validate(self, value):
         """ Validate  on input """
-        super(CapchaValidator, self).validate(value)
+        super(CaptchaValidator, self).validate(value)
         
         context = self.context
         value = context.restrictedTraverse('@@captcha').verify()
@@ -54,13 +54,13 @@ class CapchaValidator(validator.SimpleFieldValidator):
 
 
 # Set conditions for which fields the validator class applies
-validator.WidgetValidatorDiscriminators(CapchaValidator, field=ICapchaBehavior['capchafield'])
+validator.WidgetValidatorDiscriminators(CaptchaValidator, field=ICaptchaBehavior['captchafield'])
 #
 # Register the validator so it will be looked up by z3c.form machinery
-zope.component.provideAdapter(CapchaValidator)
+zope.component.provideAdapter(CaptchaValidator)
 
 
 
-alsoProvides(ICapchaBehavior, IFormFieldProvider)
+alsoProvides(ICaptchaBehavior, IFormFieldProvider)
 
 

@@ -1,29 +1,29 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:z3c="http://namespaces.zope.org/z3c"
-	i18n_domain="medialog.capchawidget">
+	i18n_domain="medialog.captchawidget">
 	
 
-  <class class=".widget.CapchaWidget">
+  <class class=".widget.CaptchaWidget">
     <require
         permission="zope.Public"
-        interface="medialog.capchawidget.widgets.widget.ICapchaWidget"
+        interface="medialog.captchawidget.widgets.widget.ICaptchaWidget"
         />
   </class>
 
   <!--  Display widget  -->
   <z3c:widgetTemplate
       mode="display"
-      widget="medialog.capchawidget.widgets.widget.ICapchaWidget"
+      widget="medialog.captchawidget.widgets.widget.ICaptchaWidget"
       layer="z3c.form.interfaces.IFormLayer"
-      template="capcha_display.pt" />
+      template="captcha_display.pt" />
 
   <!--  Input (edit) widget  -->
   <z3c:widgetTemplate
       mode="input"
-      widget="medialog.capchawidget.widgets.widget.ICapchaWidget"
+      widget="medialog.captchawidget.widgets.widget.ICaptchaWidget"
       layer="z3c.form.interfaces.IFormLayer"
-      template="capcha_input.pt" />
+      template="captcha_input.pt" />
       
       
       

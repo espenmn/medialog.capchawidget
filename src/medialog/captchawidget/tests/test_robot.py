@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from medialog.capchawidget.testing import MEDIALOG_CAPCHAWIDGET_ACCEPTANCE_TESTING  # noqa
+from medialog.captchawidget.testing import MEDIALOG_CAPCHAWIDGET_ACCEPTANCE_TESTING  # noqa
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 

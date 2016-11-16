@@ -7,9 +7,9 @@
    <include package=".widgets" />
  
  <plone:behavior
-        title="capcha behavior"
-        description="Provides Capcha widget"
-        provides=".behavior.ICapchaBehavior"
+        title="captcha behavior"
+        description="Provides Captcha widget"
+        provides=".behavior.ICaptchaBehavior"
         for="plone.dexterity.interfaces.IDexterityContent"
         />
 
